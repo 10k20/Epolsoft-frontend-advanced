@@ -84,8 +84,9 @@ export default {
       reader.readAsText(e.target.files[0]);
     },
     onReaderLoad(event){
-        var obj = JSON.parse(event.target.result);
-        this.tableData = obj
+      var obj = JSON.parse(event.target.result);
+      this.tableData = obj
+      this.equate()
     },
     equate() {
       this.foundData = this.tableData
